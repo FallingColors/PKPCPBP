@@ -198,6 +198,10 @@ public class PKSubprojPlugin implements Plugin<Project> {
 
     mainUpload.addGameVersion(rootCfg.getModInfo().mcVersion);
     mainUpload.addJavaVersion("Java " + rootCfg.javaVersion);
+    // CurseForge now requires us to specify target environment tags
+    // TODO: make this configurable
+    mainUpload.addGameVersion("Client");
+    mainUpload.addGameVersion("Server");
 
     mainUpload.releaseType = userCfg.stability;
 
