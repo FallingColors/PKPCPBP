@@ -17,6 +17,7 @@ repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
     gradlePluginPortal()
+    flatDir { dir(project.file("libs")) }
 }
 
 dependencies {
@@ -25,7 +26,7 @@ dependencies {
     implementation("blue.endless:jankson:1.2.2")
     implementation("com.diluv.schoomp:Schoomp:1.2.6")
 
-    implementation(group = "net.darkhax.curseforgegradle", name = "CurseForgeGradle", version = "1.0.10")
+    implementation(group = "net.darkhax.curseforgegradle", name = "CurseForgeGradle", version = "1.3-hex")
     implementation(group = "com.modrinth.minotaur", name = "Minotaur", version = "2.8.7")
     implementation("org.junit.jupiter:junit-jupiter:5.8.1")
 }
